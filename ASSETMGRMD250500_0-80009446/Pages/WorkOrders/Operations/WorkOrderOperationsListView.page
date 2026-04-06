@@ -126,6 +126,10 @@
 				"Service": "/SAPAssetManager/Services/AssetManager.service",
 				"QueryOptions": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsListViewQueryOptionWrapper.js"
 			},
+			"DataPaging": {
+				"ShowLoadingIndicator": true,
+				"LoadingIndicatorText": "$(L,loading)"
+			},
 			"OnSelectionChanged": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsOnSelectionChanged.js",
 			"Selection": {
 				"LongPressToEnable": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsLongPress.js",
@@ -144,7 +148,10 @@
 		},
 		"Filters": "/SAPAssetManager/Rules/WorkOrders/ListView/WorkOrderOperationsListViewDefaultFilters.js",
 		"_Type" : "Control.Type.SectionedTable",
-		"_Name" : "SectionedTable"
+		"_Name" : "SectionedTable",
+		"LoadingIndicator": {
+			"Enabled": true
+		}
 	}],
 	"FioriToolbar": {
 		"_Name": "WorkOrderOperationsListViewFioriToolbar",
