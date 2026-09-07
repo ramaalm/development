@@ -33,7 +33,10 @@ export default class {
     static showTimeCaptureMessage(context, subOperation, isFinalRequired) {
 
         if (ConfirmationCreateIsEnabled(context)) {
-            return libThis.showConfirmationsCaptureMessage(context, subOperation, isFinalRequired);
+            if(context.binding.ControlKey !== "YBM3"){
+                return libThis.showConfirmationsCaptureMessage(context, subOperation, isFinalRequired);
+            }
+            // return libThis.showConfirmationsCaptureMessage(context, subOperation, isFinalRequired);
         } else if (TimeSheetCreateIsEnabled(context)) {
             return libThis.showTimeSheetCaptureMessage(context, subOperation, isFinalRequired);
         }
