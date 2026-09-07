@@ -37,7 +37,7 @@
             "platform": "android",
             "sourceMaps": true,
             "watch": false,
-             "appRoot": "C:/mdkclient2565/MDKCLIENT06P_5-80009839/MDKClient_SDK/AhlstromDev"
+            "appRoot": "C:/mdkclient2565/MDKCLIENT06P_5-80009839/MDKClient_SDK/AhlstromDev"
         }
     ]
-}
+} 

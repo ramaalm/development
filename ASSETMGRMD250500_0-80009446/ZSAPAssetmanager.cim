@@ -299,6 +299,10 @@
 			"Target": "/SAPAssetManager/Pages/Overview.page"
 		},
 		{
+			"Source": "/ZSAPAssetManager/Pages/WorkOrders/SubOperation/SubOperationsListView.page",
+			"Target": "/SAPAssetManager/Pages/WorkOrders/SubOperation/SubOperationsListView.page"
+		},
+		{
 			"Source": "/ZSAPAssetManager/Rules/WorkOrders/WorkOrderLibrary.js",
 			"Target": "/SAPAssetManager/Rules/WorkOrders/WorkOrderLibrary.js"
 		},

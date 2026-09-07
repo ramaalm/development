@@ -1,0 +1,12 @@
+{
+    "folders": [
+        {
+            "path": "ASSETMGRMD250500_0-80009446"
+        }
+    ],
+    "settings": {
+        "mdk.bundlerExternals": [
+        "nativescript-speech-recognition", "@nativescript/geolocation", "extension-LocationService", "extension-GenericWebView", "extension-SAMFoundation", "extension-MapAuthenticator", "extension-SAPScannerFramework", "uuid", "@nstudio/nativescript-dynatrace", "@nativescript/core/accessibility", "xml-js", "stream", "buffer", "emitter", "nativescript-qr-generator", "@nativescript/core/timer"
+        ]
+    }
+}

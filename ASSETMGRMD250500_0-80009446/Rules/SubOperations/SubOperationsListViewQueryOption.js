@@ -21,6 +21,8 @@ export default function SubOperationsListViewQueryOption(context) {
 		'WorkOrderOperation/WOHeader/OrderMobileStatus_Nav,WorkOrderOperation/WOHeader/UserTimeEntry_Nav',
 		'WorkOrderOperation/WOHeader/WOPriority',
 		'WorkOrderOperation/UserTimeEntry_Nav',
+		'EquipmentSubOperation',
+		'FunctionalLocationSubOperation',
 	];
 	const orderby = [
 		'OrderId',
