@@ -28,7 +28,7 @@
             "platform": "android",
             "sourceMaps": true,
             "watch": true,
-            "appRoot": "/Users/kailash/Documents/mdk2591/MDKCLIENT09P_1-70009241/MDKClient_SDK/SvcAlmDev"
+            "appRoot": "C:/mdkclient2565/MDKCLIENT06P_5-80009839/MDKClient_SDK/AhlstromDev"
         },
         {
             "name": "MDK Attach on Android",
@@ -37,7 +37,7 @@
             "platform": "android",
             "sourceMaps": true,
             "watch": false,
-             "appRoot": "/Users/kailash/Documents/mdk2591/MDKCLIENT09P_1-70009241/MDKClient_SDK/SvcAlmDev"
+            "appRoot": "C:/mdkclient2565/MDKCLIENT06P_5-80009839/MDKClient_SDK/AhlstromDev"
         }
     ]
-} =
+} 

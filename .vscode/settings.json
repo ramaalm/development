@@ -9,7 +9,7 @@
     "mdk.referenceApplications": [
         {
             "name": "SAPAssetManager",
-            "path": "/Users/kailash/Documents/2505_Rama/fissue/development/ASSETMGRMD250500_0-80009446/Application.app",
+            "path": "c:\\Users\\ext-rc\\OneDrive - Ahlstrom Oyj\\Documents\\almCode\\ALMMetadata\\ASSETMGRMD250500_0-80009446\\Application.app",
             "comp": "ZSAPAssetManager"
         }
     ]
