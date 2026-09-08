@@ -49,6 +49,16 @@ export default function NotificationCreateChangeSetNav(context, bindingParams) {
             binding.HeaderEquipmentDesc = contextBinding.EquipDesc;
             binding.OnlineEquipment = true;
         }
+
+        /* Changes related to if suboperation have equipment/Funloc when user clicks "Add Notification"
+          in notification screen Equipment & Funlication should come by default started here Ramakishan */
+          
+        else if(contextBinding && contextBinding['@odata.type'] === "#sap_mobile.MyWorkOrderSubOperation"){
+            binding.HeaderFunctionLocation = contextBinding.OperationFunctionLocation;
+            binding.HeaderEquipment = contextBinding.OperationEquipment;
+        }
+        /* Changes related to if suboperation have equipment/Funloc when user clicks "Add Notification"
+          in notification screen Equipment & Funlication should come by default ended here Ramakishan */
         let prevPageProxy;
         try {
             if (libCommon.getPageName(context) === 'SideMenuDrawer') {
