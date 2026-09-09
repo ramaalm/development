@@ -54,7 +54,12 @@ export default class OperationFastFilters extends FastFiltersWithStatuses {
             { name: FAST_FILTERS.ASSIGNED_TO_ME, value: this._getAssignmentFilterItemReturnValue(), property: this.config.assignmentPropertyPath, visible: this.isAssignmentFilterVisible(context) },
             { name: FAST_FILTERS.EMERGENCY, value: this._getEmergencyFilterItemReturnValue(), property: this.config.emergencyPropertyPath, visible: this.isEmergencyFilterVisible(context) },
             { name: FAST_FILTERS.MODIFIED, value: this._getPendingFilterItemReturnValue(), visible: this.isModifiedFilterVisible(context) },
-            { name: FAST_FILTERS.ASSIGNED_TO_ME1, value: this._getAssignmentFilterItemReturnValue(), property: "MyWorkOrderOperationCapacityRequirement_/PersonnelNo", visible: true },
+            //{ name: FAST_FILTERS.ASSIGNED_TO_ME1, value: this._getAssignmentFilterItemReturnValue(), property: "MyWorkOrderOperationCapacityRequirement_/PersonnelNo", visible: true },
+            
+            // Changes related to Capacity filter for operations list page, to get the operations assigned to the logged in user based on capacity assignment started here Ramakishan
+            { name: FAST_FILTERS.ASSIGNED_TO_ME1, value: this._getCapacityFilterItemReturnValue(context), visible: true},
+            // Changes related to Capacity filter for operations list page, to get the operations assigned to the logged in user based on capacity assignment ended here Ramakishan
+
         ];
         if (isFSMCSKPINewVisible(context)) {
             return [
@@ -153,6 +158,15 @@ export default class OperationFastFilters extends FastFiltersWithStatuses {
         const DEFAULT_PERSONAL_NUMBER = '00000000';
         return CommonLibrary.getPersonnelNumber() || DEFAULT_PERSONAL_NUMBER;
     }
+
+    // Changes related to Capacity filter for operations list page, to get the operations assigned to the logged in user based on capacity assignment started here Ramakishan
+    _getCapacityFilterItemReturnValue(context) {
+        let userName = CommonLibrary.getSapUserName(); 
+        let UserNameMatch = '0'+userName;
+        let query = `MyWorkOrderOperationCapacityRequirement_/any(mc : mc/PersonnelNo eq '${UserNameMatch}')`;
+        return query;
+    }
+    // Changes related to Capacity filter for operations list page, to get the operations assigned to the logged in user based on capacity assignment ended here Ramakishan
 
     _getPendingFilterItemReturnValue() {
         return this.config.modifiedFilterQuery ? this.config.modifiedFilterQuery + ' or sap.hasPendingChanges()' : 'sap.hasPendingChanges()';
