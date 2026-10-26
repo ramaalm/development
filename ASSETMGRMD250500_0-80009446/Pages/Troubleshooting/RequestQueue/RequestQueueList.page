@@ -1,0 +1,67 @@
+{
+	"Caption": "$(L,pending_request_queue)",
+	"Controls": [
+		{
+			"Sections": [{
+				"_Type": "Section.Type.ObjectTable",
+				"_Name": "RequestQueueObjectTable",
+				"Header": {
+					"Caption": "/SAPAssetManager/Rules/Troubleshooting/RequestQueue/RequestQueueCountCaption.js",
+					"UseTopPadding": false
+				},
+				"Search": {
+					"Enabled": true
+				},
+				"ObjectCell": {
+					"_Name": "RequestQueueEntry",
+					"Title": "{RequestID} - {URL}",
+					"Subhead": "Method: {Method}",
+					"Footnote": "Status: {Status}",
+					"OnPress": "/SAPAssetManager/Actions/Troubleshooting/RequestQueue/RequestQueueDetailsNav.action"
+				},
+				"Target": {
+			"EntitySet": "RequestQueue",
+			"Service": "/SAPAssetManager/Services/AssetManager.service"
+		}
+			}],
+			"FilterFeedbackBar": {
+				"_Type": "Control.Type.FilterFeedbackBar",
+				"_Name": "RequestQueueFilterFeedback",
+				"ShowAllFilters": true,
+				"FastFilters": [
+					{
+						"_Name": "FailedFilter",
+						"_Type": "Control.Type.FastFilterItem",
+						"FilterType": "Filter",
+						"FilterProperty": "",
+						"CustomQueryGroup": "RequestQueueList",
+						"DisplayValue": "/SAPAssetManager/Rules/Troubleshooting/RequestQueue/RequestQueueFilterCaptionFailed.js",
+						"ReturnValue": "/SAPAssetManager/Rules/Troubleshooting/RequestQueue/RequestQueueReturnValueFailed.js"
+					},
+					{
+						"_Name": "PendingFilter",
+						"_Type": "Control.Type.FastFilterItem",
+						"FilterType": "Filter",
+						"FilterProperty": "",
+						"CustomQueryGroup": "RequestQueueList",
+						"DisplayValue": "/SAPAssetManager/Rules/Troubleshooting/RequestQueue/RequestQueueFilterCaptionPending.js",
+						"ReturnValue": "/SAPAssetManager/Rules/Troubleshooting/RequestQueue/RequestQueueReturnValuePending.js"
+					},
+					{
+						"_Name": "SuccessfulFilter",
+						"_Type": "Control.Type.FastFilterItem",
+						"FilterType": "Filter",
+						"FilterProperty": "",
+						"CustomQueryGroup": "RequestQueueList",
+						"DisplayValue": "/SAPAssetManager/Rules/Troubleshooting/RequestQueue/RequestQueueFilterCaptionSuccessful.js",
+						"ReturnValue": "/SAPAssetManager/Rules/Troubleshooting/RequestQueue/RequestQueueReturnValueSuccessful.js"
+					}
+				]
+			},
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "RequestQueueList",
+	"_Type": "Page"
+}

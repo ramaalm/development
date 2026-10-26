@@ -886,7 +886,14 @@
               "Image":"$(PLT,/SAPAssetManager/Images/errors.png,/SAPAssetManager/Images/errors.android.png)",
               "OnPress": "/SAPAssetManager/Rules/ErrorArchive/ErrorArchiveAndSyncNav.js",
               "_Name": "Errors"
-            }
+            },
+            {
+"Title": "$(L,troubleshooting)",
+"Image": "sap-icon://warning",
+"OnPress": "/SAPAssetManager/Actions/Troubleshooting/TroubleshootingMenuNav.action",
+"Visible": "/SAPAssetManager/Rules/Troubleshooting/IsTroubleshootingToolsEnabled.js",
+"_Name": "TroubleshootingSection"
+}
           ]
         }
       ],

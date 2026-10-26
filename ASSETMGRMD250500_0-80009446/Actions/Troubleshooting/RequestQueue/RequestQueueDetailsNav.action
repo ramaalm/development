@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "RequestQueueDetailsNav"
+	},
+	"PageMetadata": "/SAPAssetManager/Rules/Troubleshooting/RequestQueue/RequestQueueDetails.js"
+}

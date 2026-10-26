@@ -1,0 +1,44 @@
+{
+    "_Type": "Page",
+    "_Name": "EntitySetRecordsList",
+    "Caption": "$(L,records)",
+    "OnLoaded": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetRecordsListOnLoaded.js",
+    "Controls": [
+        {
+            "_Type": "Control.Type.SectionedTable",
+            "_Name": "EntitySetRecordsSectionedTable",
+            "Sections": [
+                {
+                    "_Type": "Section.Type.ObjectTable",
+                    "_Name": "EntitySetRecordsResults",
+                    "Search": {
+                        "Enabled": true,
+                        "Placeholder": "$(L,search)",
+                        "BarcodeScanner": true
+                    },
+                    "EmptySection": {
+                        "Caption": "$(L,entityset_empty)"
+                    },
+                    "Header": {
+                        "Caption": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetSearchResultsCaption.js",
+                        "UseTopPadding": false
+                    },
+                    "ObjectCell": {
+                        "Title": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetCellTitle.js",
+                        "Subhead": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetCellSubhead.js",
+                        "Footnote": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetCellFootnote.js",
+                        "StatusText": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetCellStatus.js",
+                        "AccessoryType": "DisclosureIndicator",
+                        "OnPress": "/SAPAssetManager/Actions/Troubleshooting/EntitySet/EntitySetRecordDetailNav.action",
+                        "TextAlignment": "left"
+                    },
+                    "Target": {
+                        "EntitySet": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetName.js",
+                        "Service": "/SAPAssetManager/Services/AssetManager.service",
+                        "QueryOptions": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetQueryOptions.js"
+                    }
+                }
+            ]
+        }
+    ]
+}

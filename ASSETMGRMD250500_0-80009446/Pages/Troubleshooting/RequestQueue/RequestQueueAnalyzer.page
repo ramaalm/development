@@ -1,0 +1,19 @@
+{
+    "Controls": [
+        {
+            "_Type": "Control.Type.FlexibleColumnLayout",
+            "_Name": "MainLayout",
+            "StartColumn": {
+                "_Name": "RequestQueueEntries",
+                "PageToOpen": "/SAPAssetManager/Pages/Troubleshooting/RequestQueue/RequestQueueList.page"
+            },
+            "EndColumn": {
+                "_Name": "RequestQueueDetails",
+                "PageToOpen": "/SAPAssetManager/Pages/Forms/Empty.page"
+            }
+        }
+    ],
+    "_Name": "RequestQueueAnalyzer",
+    "_Type": "Page",
+    "Caption": "$(L,pending_transactions)"
+}

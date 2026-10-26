@@ -1,0 +1,19 @@
+{
+    "_Type": "Page",
+    "_Name": "EntitySetRecords",
+    "Caption": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetRecordsPageCaption.js",
+    "Controls": [
+        {
+            "_Type": "Control.Type.FlexibleColumnLayout",
+            "_Name": "MainLayout",
+            "StartColumn": {
+                "_Name": "EntitySetRecordsList",
+                "PageToOpen": "/SAPAssetManager/Pages/Troubleshooting/EntitySet/EntitySetRecordsList.page"
+            },
+            "EndColumn": {
+                "_Name": "EntitySetRecordDetail",
+                "PageToOpen": "/SAPAssetManager/Pages/Troubleshooting/EntitySet/EntitySetRecordDetailEmpty.page"
+            }
+        }
+    ]
+}

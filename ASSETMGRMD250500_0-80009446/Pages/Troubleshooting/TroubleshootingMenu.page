@@ -1,0 +1,48 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"_Type": "Section.Type.ObjectTable",
+					"_Name": "SectionObjectTable0",
+					"ObjectCells": [
+						{
+							"ObjectCell": {
+								"_Type": "ObjectTable.Type.ObjectCell",
+								"_Name": "ObjectCollectionTypeObjectCell2",
+								"Title": "$(L,inspect_entities)",
+								"OnPress": "/SAPAssetManager/Actions/Troubleshooting/EntitySet/EntitySetNav.action"
+							}
+						},
+						{
+							"ObjectCell": {
+								"_Type": "ObjectTable.Type.ObjectCell",
+								"_Name": "ObjectCollectionTypeObjectCell1",
+								"Title": "$(L,inspect_pending_transaction)",
+								"OnPress": "/SAPAssetManager/Actions/Troubleshooting/RequestQueue/RequestQueueAnalyzerNav.action"
+							}
+						},
+						{
+							"ObjectCell": {
+								"_Type": "ObjectTable.Type.ObjectCell",
+								"_Name": "ObjectCollectionTypeObjectCell3",
+								"Title": "$(L,inspect_log_files)",
+								"OnPress": "/SAPAssetManager/Actions/Troubleshooting/LogViewer/LogViewerNav.action"
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "TroubleshootingMenu",
+	"Caption": "$(L,troubleshooting)",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar"
+	}
+}

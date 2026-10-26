@@ -1,0 +1,73 @@
+{
+    "Caption": "$(L,inspect_log_files)",
+    "_Name": "LogViewer",
+    "_Type": "Page",
+    "ActionBar": {
+        "Items": [
+            {
+                "Position": "Left",
+                "Caption": "$(L,share)",
+                "OnPress": "/SAPAssetManager/Rules/Troubleshooting/LogViewer/LogViewerShare.js"
+            },
+            {
+                "Position": "Right",
+                "Caption": "$(L,log_filter_all)",
+                "OnPress": "/SAPAssetManager/Rules/Troubleshooting/LogViewer/LogViewerSetFilterAll.js"
+            },
+            {
+                "Position": "Right",
+                "Caption": "$(L,log_filter_debug)",
+                "OnPress": "/SAPAssetManager/Rules/Troubleshooting/LogViewer/LogViewerSetFilterDebug.js"
+            },
+            {
+                "Position": "Right",
+                "Caption": "$(L,log_filter_info)",
+                "OnPress": "/SAPAssetManager/Rules/Troubleshooting/LogViewer/LogViewerSetFilterInfo.js"
+            },
+            {
+                "Position": "Right",
+                "Caption": "$(L,log_filter_warning)",
+                "OnPress": "/SAPAssetManager/Rules/Troubleshooting/LogViewer/LogViewerSetFilterWarning.js"
+            },
+            {
+                "Position": "Right",
+                "Caption": "$(L,log_filter_error)",
+                "OnPress": "/SAPAssetManager/Rules/Troubleshooting/LogViewer/LogViewerSetFilterError.js"
+            }
+        ],
+        "_Name": "LogViewerActionBar",
+        "_Type": "Control.Type.ActionBar"
+    },
+    "Controls": [
+        {
+            "_Type": "Control.Type.SectionedTable",
+            "_Name": "LogViewerSectionedTable",
+            "Sections": [
+                {
+                    "_Type": "Section.Type.ObjectTable",
+                    "_Name": "LogViewerList",
+                    "Search": {
+                        "Enabled": true,
+                        "Delay": 300,
+                        "MinimumCharacterThreshold": 1,
+                        "Placeholder": "$(L,log_search_placeholder)",
+                        "BarcodeScanner": true
+                    },
+                    "EmptySection": {
+                        "Caption": "$(L,log_empty)"
+                    },
+                    "ObjectCell": {
+                        "Title": "{Message}",
+                        "Subhead": "{Subhead}",
+                        "Footnote": "{Level}",
+                        "StatusText": "{Level}",
+                        "AccessoryType": "DisclosureIndicator",
+                        "OnPress": "/SAPAssetManager/Actions/Troubleshooting/LogViewer/LogEntryDetailNav.action",
+                        "TextAlignment": "left"
+                    },
+                    "Target": "/SAPAssetManager/Rules/Troubleshooting/LogViewer/LogViewerEntries.js"
+                }
+            ]
+        }
+    ]
+}

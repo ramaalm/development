@@ -1,0 +1,35 @@
+{
+    "Caption": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetsPageCaption.js",
+    "_Name": "EntitySets",
+    "_Type": "Page",
+    "Controls": [
+        {
+            "_Type": "Control.Type.SectionedTable",
+            "_Name": "EntitySetsSectionedTable",
+            "Sections": [
+                {
+                    "_Type": "Section.Type.ObjectTable",
+                    "_Name": "EntitySetsList",
+                    "Search": {
+                        "Enabled": true,
+                        "Delay": 300,
+                        "MinimumCharacterThreshold": 1,
+                        "Placeholder": "$(L,entityset_search_placeholder)",
+                        "BarcodeScanner": true
+                    },
+                    "EmptySection": {
+                        "Caption": "$(L,entityset_empty)"
+                    },
+                    "ObjectCell": {
+                        "Title": "{Name}",
+                        "Subhead": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetRowSubhead.js",
+                        "AccessoryType": "DisclosureIndicator",
+                        "OnPress": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetRowSelected.js",
+                        "TextAlignment": "left"
+                    },
+                    "Target": "/SAPAssetManager/Rules/Troubleshooting/EntitySet/EntitySetsList.js"
+                }
+            ]
+        }
+    ]
+}
