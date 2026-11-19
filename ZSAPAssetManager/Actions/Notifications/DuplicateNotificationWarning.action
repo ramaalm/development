@@ -1,0 +1,9 @@
+{
+"_Type": "Action.Type.Message",
+"Title": "Warning",
+"Message": "Open notifications already exist for selected Technical Object.",
+"OKCaption": "View Open Notifications",
+"CancelCaption": "Continue",
+"OnOK": "/ZSAPAssetManager/Actions/Notifications/OpenDuplicateNotificationsPage.action",
+"OnCancel": "/SAPAssetManager/Actions/Notifications/CreateUpdate/NotificationCreateUpdateRequired.action"
+}

@@ -1,0 +1,32 @@
+{
+"_Type": "Page",
+"_Name": "DuplicateNotificationsPage",
+"Caption": "Open Notifications",
+"Controls": [
+{
+"_Type": "Control.Type.SectionedTable",
+"_Name": "SectionedTable",
+"Sections": [
+{
+"_Type": "Section.Type.ObjectTable",
+"_Name": "DuplicateNotificationsSection",
+"EmptySection": {
+"Caption": "No open notifications found"
+},
+"Target": {
+"Service": "/SAPAssetManager/Services/AssetManager.service",
+"EntitySet": "MyNotificationHeaders",
+"QueryOptions": "/ZSAPAssetManager/Rules/Notifications/CreateUpdate/DuplicateNotificationsFilter.js"
+},
+"ObjectCell": {
+"Title": "{NotificationNumber}",
+"Subhead": "{NotificationDescription}",
+"Footnote": "Functional Location: {HeaderFunctionLocation}",
+"StatusText": "{NotifMobileStatus_Nav/MobileStatus}",
+"AccessoryType": "DisclosureIndicator"
+}
+}
+]
+}
+]
+}

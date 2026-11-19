@@ -15,7 +15,7 @@
                 "_Name": "Done",
                 "SystemItem": "$(PLT,'Done','', '','Done')",
                 "Text": "/SAPAssetManager/Rules/Common/Platform/DoneText.js",
-                "OnPress": "/SAPAssetManager/Actions/Notifications/CreateUpdate/NotificationCreateUpdateRequired.action"
+                "OnPress": "/ZSAPAssetManager/Rules/Notifications/CreateUpdate/CheckDuplicateNotification.js"
             }
         ]
     },
