@@ -337,7 +337,7 @@
                 {
                     "_Name": "QMCodeGroupListPicker",
                     "_Type": "Control.Type.FormCell.ListPicker",
-                    "AllowDefaultValueIfOneItem": true,
+                    "AllowDefaultValueIfOneItem": false,
                     "AllowMultipleSelection": false,
                     "IsPickerDismissedOnSelection": true,
                     "IsSearchCancelledAfterSelection": true,
