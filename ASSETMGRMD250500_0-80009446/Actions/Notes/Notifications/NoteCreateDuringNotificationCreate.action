@@ -10,7 +10,7 @@
         "TextString": "#Control:LongTextNote/#Value"
     },
     "Headers": {
-        "OfflineOData.RemoveAfterUpload": "/SAPAssetManager/Rules/Common/RemoveAfterUploadValue.js",
+        "OfflineOData.RemoveAfterUpload": "true",
         "OfflineOData.TransactionID": "/SAPAssetManager/Rules/Notifications/ChangesetSwitchNotificationID.js"
     },
     "OnSuccess": "/SAPAssetManager/Rules/Notes/SubOperation/NotificationCreateNoteCreate.js",

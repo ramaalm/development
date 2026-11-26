@@ -68,7 +68,10 @@ export default class {
                     'TextObjectType': context.getGlobalDefinition('/SAPAssetManager/Globals/Notifications/NotificationNoteType.global').getValue(),
                 },
                 'Headers': {
-                    'OfflineOData.RemoveAfterUpload': '/SAPAssetManager/Rules/Common/RemoveAfterUploadValue.js',
+                    // LOCAL_N IDs are transient: ObjectKey becomes stale after upload and causes -10103 on
+                    // next notification create when the same local ID is reused. Force removal for those.
+                    // For backend IDs the key is stable, so respect the upload-only personalisation setting.
+                    'OfflineOData.RemoveAfterUpload': notificationNumber.startsWith('LOCAL_N') ? 'true' : '/SAPAssetManager/Rules/Common/RemoveAfterUploadValue.js',
                     'OfflineOData.TransactionID': notificationNumber,
                 },
             },
